@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+option go_package = "github.com/klevtcov/gRPC/tripple/server/server";
+
+service Multiplier {
+    rpc Myltiply(MyltiplyRequest) returns (MyltiplyResponse);
+}
+
+message MyltiplyRequest {
+    int32 x = 1;
+}
+
+message MyltiplyResponse {
+    int32 result = 1;
+}
